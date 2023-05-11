@@ -10,7 +10,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../Trabajo/TrabajoImplementacion/out/artifacts/TrabajoImplementacion_jar/TrabajoImplementacion.jar!/" />
+          <root url="jar://$MODULE_DIR$/../ImplementacionExamenFinal/out/artifacts/ImplementacionExamenFinal_jar/ImplementacionExamenFinal.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

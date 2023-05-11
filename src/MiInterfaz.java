@@ -42,6 +42,8 @@ public class MiInterfaz extends JFrame {
     private JComboBox comboBox1;
     private JButton verCantidadDeContenedoresButton;
     private JTextPane textcontpais;
+    private JButton buscarPorPrioridadButton;
+    private JTextPane prioridad;
     private Puerto puerto;
     private ButtonGroup group = new ButtonGroup();
     ArrayList<String> listaPaisesSelect = new ArrayList<String>();
@@ -71,6 +73,7 @@ public class MiInterfaz extends JFrame {
         comboBox1.setSelectedIndex(-1);
         puerto = new Puerto();
         textcontpais.setVisible(false);
+        prioridad.setVisible(false);
 
         apilarboton.addActionListener(new ActionListener() {
             @Override
@@ -292,6 +295,23 @@ public class MiInterfaz extends JFrame {
                 textcontpais.setVisible(true);
                 int numContenedorPais = puerto.BuscarContenedoresPorPais(comboBox1.getSelectedItem().toString());
                 textcontpais.setText(""+numContenedorPais);
+            }
+        });
+        buscarPorPrioridadButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                prioridad.setVisible(true);
+                String prio = "";
+                if(a1.isSelected()) {
+                    prio = puerto.prioridad(1);
+                }
+                if(a2.isSelected()) {
+                    prio = puerto.prioridad(2);
+                }
+                if(a3.isSelected()) {
+                    prio = puerto.prioridad(3);
+                }
+                prioridad.setText(prio);
             }
         });
     }
